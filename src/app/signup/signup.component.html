@@ -1,0 +1,56 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/login">NewsHub</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      Welcome To News Hub
+    </div>
+  </div>
+</nav>
+
+
+<div class="conainer">
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="card">
+                <div class="text-center">
+                    <h1>Signup</h1>
+                    <h6>Register Yourself...</h6>
+                </div>
+                <form>
+
+                    <form [formGroup]="signUp" (ngSubmit)="signnUp()">
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Full Name: </label>
+                            <input  formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1" >
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Mobile Number: </label>
+                            <input  formControlName="mobile" type="text" class="form-control" id="exampleInputPassword1">
+                          </div>
+
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input  formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Password</label>
+                          <input  formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Signup</button>
+                      </form>
+                      <a  style="color: #fff; margin-top: 10px;" routerLink="/login"> Existing user? Login here...</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+  <p>Developed By Raj Bisen</p>
+</div>
